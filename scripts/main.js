@@ -8,18 +8,25 @@ let engine;
 let scene;
 
 window.onload = startGame;
+document.getElementById("card_container").style.display = "none";
 
 function startGame() {
     canvas = document.querySelector("#renderCanvas");
     engine = new BABYLON.Engine(canvas, true, { stencil: true });
 
-    createCustomLoadingScreen(engine);
+    //createCustomLoadingScreen(engine);
+    let first = true;
 
     scene = createScene();
 
     // main animation loop 60 times/s
     scene.toRender = () => {
         document.getElementById("fps").innerHTML = engine.getFps().toFixed() + " fps";
+
+        if(first) {
+            document.getElementById("card_container").style.display = "block";
+            first = false;
+        }
 
         scene.getMeshByName("turtle").move();        
 
