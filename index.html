@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="stylesheet" href="./style.css">
+        <title>Aquarium</title>
+
+        <!-- Babylon.js -->
+        <script src="./lib/babylon.max.js"></script>
+        <script src="./lib/babylon.loaders.min.js"></script>
+
+        <script type="module" src="./scripts/main.js"></script>
+    </head>
+<body>
+    <div id="loadingScreen"></div>
+
+    <div id="fps">0</div>
+
+    <canvas id="renderCanvas"></canvas>
+
+    <div id="card_container" data-offset="2">
+        <!--
+        <div class="pg">
+            <img src="https://pluspng.com/img-png/aquaman-png-aquaman-png-clipart-666.png">
+        </div>
+        -->
+        <div id="card">
+            <div class="shine"></div>
+            <div class="text-block">
+                <h1>Aquarium <small>(2022)</small></h1>
+                <h3>HTML | CSS | Javascript</h3>
+                <p>
+                    Hello there, welcome to my aquarium project on the web. This one was developped with the librairy Babylon.js in a weekend. I hope you will like it.
+                </p>
+                <p>
+                    To move the camera, first close this window. And for a better experience press F.
+                </p>
+                <button id="close_button">Close The Window</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

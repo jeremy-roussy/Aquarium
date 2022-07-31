@@ -1,0 +1,11 @@
+Model Information:
+* title:	Sunken Anchor
+* source:	https://sketchfab.com/3d-models/sunken-anchor-e654cb6e6e2c4217a7decb6bb9c0010d
+* author:	guillaume.biju-duval (https://sketchfab.com/guillaume.biju-duval)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Sunken Anchor" (https://sketchfab.com/3d-models/sunken-anchor-e654cb6e6e2c4217a7decb6bb9c0010d) by guillaume.biju-duval (https://sketchfab.com/guillaume.biju-duval) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
