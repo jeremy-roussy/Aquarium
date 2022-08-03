@@ -21,7 +21,6 @@ function startGame() {
 
     // main animation loop 60 times/s
     scene.toRender = () => {
-        document.getElementById("fps").innerHTML = engine.getFps().toFixed() + " fps";
 
         if(first) {
             document.getElementById("card_container").style.display = "block";
@@ -37,6 +36,10 @@ function startGame() {
     // when finished it will execute its onFinish callback that will run the loop
     scene.assetsManager.load();
 }
+
+window.addEventListener("resize", () => {
+    engine.resize()
+});
 
 function createScene() {
     let scene = new BABYLON.Scene(engine);

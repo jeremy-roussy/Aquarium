@@ -14,7 +14,7 @@ html, body {
 }
 
 body {
-	background:linear-gradient(#f6f7fc 0%, #d5e1e8 40%);
+	background:linear-gradient(0deg, rgb(188,151,136) 30%, rgb(0, 221.85, 221.85) );
 	transform-style:preserve-3d;
 	transform:perspective(800px);
 	font-family:'Lato', Sans-serif;
@@ -22,7 +22,7 @@ body {
 
 #card_container {
 	width:700px;
-	height:350px;
+	height:400px;
 	position:absolute;
 	top:50%;
 	left:50%;
@@ -65,7 +65,7 @@ body {
 	font-weight:700;
 }
 
-#card .text-block p {
+#card .text-block p + li {
 	font-weight:300;
 	width:60%;
 }
@@ -87,7 +87,7 @@ body {
 
 #card_container .pg {
 	position:absolute;
-	height:450px;
+	height:515px;
 	width:40%;
 	right:-10px;
 	bottom:0px;
@@ -95,7 +95,7 @@ body {
 }
 
 #card_container .pg > img{
-	height:450px;
+	height:515px;
 }
 
 .shine {
@@ -112,13 +112,6 @@ button {
 	color:#fff;
 }
 
-.bubble {
-	position:absolute;
-	width:178px;
-	height:178px;
-	background-image: url("https://assets.codepen.io/32887/bubble.png");
-}
-
 #renderCanvas {
     position: absolute;
     top: 0;
@@ -128,15 +121,69 @@ button {
     touch-action: none;
 }
 
-#fps {
-    position: absolute;
-    text-align: center;
-    font-size: 8px;
-    color: #0f0;
-    text-shadow:0px 0px 1px #0f0;
-    top: 10px;
-    left: 0;
-    width: 60px;
-    height: 20px;
-    font-family: Orbitron;
-}
+.avertissement {
+	position: fixed;
+	bottom: 10px;
+	left: 50%;
+	transform: translateX(-50%);
+	text-align: center;
+	color: #fff;
+	font-family: 'Roboto', sans-serif;
+  }
+  
+  .phone {
+	display: inline-block;
+	width: 30px;
+	height: 60px;
+	border: 3px solid #fff;
+	border-radius: 5px;
+	position: relative;
+  }
+  
+  .phone:after {
+	content:'';
+	width: 100%;
+	border-bottom: 3px solid #fff;
+	position: absolute;
+	top: 4px;
+	left: 0;
+  }
+  
+  .phone:before {
+	content:'';
+	width: 100%;
+	border-bottom: 3px solid #fff;
+	position: absolute;
+	bottom: 6px;
+	left: 0;
+  }
+  
+  .phone {
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-name: anim-rotate;
+	animation-duration: 2s;
+  }
+  
+  @keyframes anim-rotate {
+	0%, 10% { transform: rotate(0deg) }
+	40%, 60% { transform: rotate(90deg) }
+	95%, 100% { transform: rotate(0deg) }
+  }
+
+  @media only screen and (orientation:portrait) {
+  
+	canvas {
+		opacity: 0;
+	}
+
+	.avertissement {
+		display: block;
+	}
+  }
+  
+  @media only screen and (orientation:landscape) {
+	.avertissement {
+		display: none;
+	}
+  }
